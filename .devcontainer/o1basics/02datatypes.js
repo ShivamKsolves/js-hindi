@@ -31,3 +31,27 @@ console.log(typeof undefined);
 
 // object array functions 
 
+
+
+const id= Symbol("123")
+
+const  anotherId =Symbol("123")
+
+console.log(typeof anotherId);
+
+// console.log(id);
+// console.log(anotherId);
+// console.log(id==anotherId) 
+
+const herso=['Mahadev','Dev','Vishnu']
+let myobj={
+    name:'shivam',
+    age:21,
+}
+const myfunction=function(){
+console.log('Hello World');
+}
+
+console.log(typeof herso);
+console.log(typeof myobj);
+console.log(typeof myfunction) // function ojbect
