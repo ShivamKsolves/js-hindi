@@ -27,7 +27,7 @@ console.log(typeof undefined);
 // sumbol - unique 
 
 
-// Nonpremitives
+// Nonpremitives (Reference)
 
-// object
+// object array functions 
 
