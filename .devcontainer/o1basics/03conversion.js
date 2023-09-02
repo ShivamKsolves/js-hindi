@@ -49,5 +49,10 @@ let str2 ="kumar"
 
 let counter = 12;
 // ++counter
-counter++
-console.log(counter);
+// counter++
+// console.log(counter);
+
+
+console.log("2"==2);
+//  if you will be doing with === comparasion then that will work perfectely
+console.log("2"===2);
