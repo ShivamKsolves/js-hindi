@@ -85,4 +85,17 @@ const obj3 ={...object1,...object2}
 
 // console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('firs')); // checking our object has value or not
+// console.log(tinderUser.hasOwnProperty('firs')); // checking our object has value or not
+
+const jsUser1={
+    name:'shivam',
+    "fullname":"shivam kumar singh",
+    age:21,
+    email:'shivamkumarshivam583@gmail.com'
+ }
+
+
+//  const {email} = jsUser1
+
+const {email:ema} = jsUser1 // it is called destructor
+ console.log(ema);
