@@ -71,4 +71,37 @@ const addTwo = (num1,num2) => ({userName:'shivam Kumar singh'}) // jab aap objec
 })()
 
 
+// hume jayad focus let and const pe uske karne pe dena cahie..  becaue var ke use me scope ka error show karne lagata hai..
+const month = 5
+switch (month) {
+    case 1:
+        console.log('This month is January');
+        break;
+    case 2:
+        console.log('This month is Febuarary');
+        break;
+    case 3:
+        console.log('This month is March');
+        break;
+    default:
+        console.log('Given month is Not matching...');
+        break;
+}
+
+
+// null collashing operator..
+// yaha pe Oo oahi value ko fetch karte hai jisme value hoti hai ..
+
+let val1;
+
+val1 =null??undefined??20
+
+// console.log(val1);
+
+// ternary operator..
+// opration?True:false
+
+const iceTeaPrice =54;
+iceTeaPrice <=80?console.log('price is less than 80'):console.log('Price greater then 80');
+
 
