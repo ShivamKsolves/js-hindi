@@ -54,12 +54,13 @@ const books =[
 
 
 //  yadi app call back me curly brackes karte hai tab appko return mention karna padega..
+
 // const myNumber =[19,2,3,4,5,6,7,9,45,6,78,90]
 
 // let value = myNumber.map((num)=>{return num+10})
 
 
-// THis is called chaning like at at time you can pass multiple condition..
+// This is called chaning like at at time you can pass multiple condition..
 // let value = myNumber.map((num)=> num*10)
 //                     .map((num)=> num+1)
 //                     .filter((number)=> number>100)
