@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<!-- adding one list item through DOM -->
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>Java script</li>
+    </ul>
+</body>
+<script>
+    // Add li using list
+    function addlanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    function addOPtionLanguage(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+
+    }
+
+    addOPtionLanguage('HTML')
+    addlanguage('CSS')
+    addlanguage('Python')
+
+    // Edit value using 
+    const secondlang = document.querySelector("li:nth-child(2)")
+    // secondlang.innerHTML ="JAVA"
+    console.log(secondlang.textContent);
+    const newli = document.createElement('li')
+    newli.textContent ="mojo"
+    secondlang.replaceWith(newli)
+
+
+    const firstElement = document.querySelector('li:first-child')
+    // console.log(firstElement.textContent);
+    firstElement.outerHTML ="<li>Type Script</li>"
+
+
+    // Remove element
+    const lastelemet = document.querySelector('li:last-child')
+    lastelemet.remove()
+
+</script>
+</html>
