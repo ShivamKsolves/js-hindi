@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second part of EVent......</title>
     <!-- Here we will leran about the async.. -->
 </head>
+
 <body>
-    
+    <h1>Shivam kumar....</h1>
+    <button id="stop">Stop</button>
 </body>
+<script>
+    // setTimeout(function(){
+    //     console.log('Hey shivam kumar.......');
+    // },2000)
+
+    // const sayshivam = function(){
+    //     console.log('Hey shivam kumar.......');
+    // }
+
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = 'THis is best Js series of internet.....'
+    }
+
+    const chageMe = setTimeout(changeText,2000)
+//    setTimeout(sayshivam,2000)
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(chageMe)
+    console.log('Stoped........');
+})
+</script>
 </html>
