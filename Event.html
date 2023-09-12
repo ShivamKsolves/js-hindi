@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS IN JAVASCRIPT</title>
+</head>
+<!-- Here i will learn about the  -->
+<!-- javascript ke under almost event sequentally run hota hai.. -->
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="100px" id="Photoshop"
+                    src="https://images.pexels.com/photos/18091901/pexels-photo-18091901/free-photo-of-light-city-road-traffic.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Photoshop"></li>
+            <li><img width="100px" id="house"
+                    src="https://images.pexels.com/photos/18326538/pexels-photo-18326538/free-photo-of-love-table-leaf-luxury.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <!-- <li><img width="100px" id="water"
+                    src="https://images.pexels.com/photos/13428333/pexels-photo-13428333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" onclick="alert('Hello shivam..')"></li> -->
+            <li><img width="100px" id="water"
+                    src="https://images.pexels.com/photos/13428333/pexels-photo-13428333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="100px" id="bird"
+                    src="https://images.pexels.com/photos/18169904/pexels-photo-18169904/free-photo-of-close-up-of-great-cormorant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="100px" id="lightHouse"
+                    src="https://images.pexels.com/photos/18025577/pexels-photo-18025577/free-photo-of-light-city-road-traffic.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    // document.getElementById('water').onclick =  ()=> {
+    //     alert('clicked on watrer using arrow function');
+    // }
+
+    // document.getElementById('water').onclick  = function() {
+    //     alert('clicked on using normal function');
+    // }
+
+    // document.getElementById('water').addEventListener('click',function(){
+    //     alert('Here water clicked.........')
+    // })
+
+    // document.getElementById('water').addEventListener('click',function(e){
+    //     console.log(e);
+    // }, false)
+
+
+    // propagation work like bubbling uppper to down
+    // when firt true then the first print uppper side and when pass false then print first clicked elemnets...
+    // jab app stop propagation karte hai tab aapka code bubble ho kar upper side nahi jayga.
+    // preventDefault(), stoppropagation.
+
+
+    // document.getElementById('images').addEventListener('click',function(e){
+
+    //     console.log('clicked the ul');
+    // }, false)
+
+    // document.getElementById('bird').addEventListener('click',function(e){
+    // console.log('clicked the Specifically bird');
+    // e.stopPropagation()
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        // console.log(e.target);
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+    })
+
+
+</script>
+
+</html>
