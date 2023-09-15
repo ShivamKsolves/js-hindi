@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3rd part of event.</title>
 </head>
+
 <body>
     <h1>Chai aur javascript......</h1>
     <button id="stop">Stop</button>
-    <button id ="start">Start</button>
+    <button id="start">Start</button>
 </body>
 <script>
-    const printme = function(){
+    let intervalId;
+    const printme = function () {
         console.log('Shivam kumar.....', Date.now());
     }
-    const intervalId = setInterval(printme,1000)
-    
+    // const intervalId = setInterval(printme,1000)
+
     document.querySelector('#start').addEventListener('click', () => {
-        setInterval(printme,1000)
+        if (!intervalId) {
+            intervalId = setInterval(printme, 1000);
+        }
     });
 
     document.querySelector('#stop').addEventListener('click', () => {
-        clearInterval(intervalId);
+        if (intervalId) {
+            clearInterval(intervalId);
+        }
+
     });
-    
+
     // For stop interval
     // document.querySelector('#start').addEventListener('click',setInterval(printme,1000))
     // document.querySelector('#start').addEventListener('click',printme)
@@ -35,4 +43,5 @@
     //     clearInterval(intervalId)
     // })
 </script>
+
 </html>
